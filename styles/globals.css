@@ -39,6 +39,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+   --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
 }
 
 :root {
@@ -117,4 +120,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Hide browser's built-in password eye icon */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none;
+}
+input[type="password"]::-webkit-contacts-auto-fill-button {
+  display: none;
+}
+
+/* KartrLine animations */
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counterclockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.rotate-clockwise {
+  animation: rotate-clockwise 1.6s linear infinite;
+}
+
+.rotate-counterclockwise {
+  animation: rotate-counterclockwise 1.6s linear infinite;
 }
