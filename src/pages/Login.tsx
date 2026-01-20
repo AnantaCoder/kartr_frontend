@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import RotatingLine  from "./KartrLine.tsx"
+
 
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../app/hooks';
@@ -14,8 +14,8 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { loginSchema, type LoginFormValues } from '../features/auth/loginSchema';
 import { Eye, EyeOff } from 'lucide-react';
-import loginBg from "@/assets/auth/bg_img.png";
-import KartrLine from './KartrLine.tsx';
+import KartrLine from '../components/KartrLine.tsx';
+
 
 
 const Login: React.FC = () => {
@@ -54,8 +54,7 @@ const Login: React.FC = () => {
 
     return (
                 <motion.div
-        className="flex flex-col min-h-screen justify-between"
-        style={{ backgroundImage: `url(${loginBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="flex flex-col min-h-screen mb-12 justify-between"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}

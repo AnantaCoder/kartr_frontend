@@ -10,8 +10,8 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { signupSponsorSchema, type SignupSponsorFormValues } from '../features/auth/signupSponsorSchema';
 import { Eye, EyeOff } from 'lucide-react';
-import loginBg from "@/assets/auth/bg_img.png";
-import KartrLine from './KartrLine';
+import KartrLine from '../components/KartrLine.tsx';
+
 
 const SignupSponsor: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,8 +46,7 @@ const SignupSponsor: React.FC = () => {
 
   return (
     <motion.div
-      className="flex items-center justify-center min-h-screen"
-      style={{ backgroundImage: `url(${loginBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="flex items-center justify-center mb-12 min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
